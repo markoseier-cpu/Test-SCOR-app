@@ -2,6 +2,11 @@ import fs from "fs";
 import pg from "pg";
 
 if (!process.env.DATABASE_URL) {
+  // Names only (never values), to tell a missing variable from an empty Railway reference
+  const dbVars = Object.keys(process.env)
+    .filter((k) => /DATABASE|^PG|POSTGRES/.test(k))
+    .map((k) => (process.env[k] ? k : `${k} (empty)`));
+  console.error(`Database variables present: ${dbVars.join(", ") || "none"}`);
   throw new Error("DATABASE_URL is not set (it is provided by the Railway PostgreSQL service)");
 }
 

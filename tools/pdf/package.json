@@ -1,0 +1,9 @@
+{
+  "name": "scor-pdf-tools",
+  "private": true,
+  "type": "module",
+  "dependencies": {
+    "fontkit": "2.0.4",
+    "mupdf": "1.28.1"
+  }
+}

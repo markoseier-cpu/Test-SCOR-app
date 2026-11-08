@@ -1,0 +1,21 @@
+# Streamlit seadistus: ainult lokaalne kuulamine, ilma telemeetriata.
+[server]
+address = "127.0.0.1"
+port = 8501
+headless = false
+# Rakendus kontrollib ise SCOR_MAX_UPLOAD_MB piirangut; see on Streamliti ülempiir (MB).
+maxUploadSize = 100
+enableXsrfProtection = true
+enableCORS = true
+fileWatcherType = "none"
+
+[browser]
+gatherUsageStats = false
+serverAddress = "localhost"
+
+[global]
+developmentMode = false
+
+[client]
+toolbarMode = "minimal"
+showErrorDetails = true

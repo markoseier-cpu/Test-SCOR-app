@@ -1,0 +1,5 @@
+# Testitud Python 3.13-ga (vt README). Versioonid on fikseeritud, et sõltuvused sobiksid omavahel.
+streamlit==1.67.0
+PyMuPDF==2.1
+numpy==2.5.4
+requests==2.34.2
